@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>PDV Mercado - Demonstração</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🛒 PDV MERCADO</h1>
+  <span id="caixaStatus">Caixa: Fechado</span>
+</header>
+
+<div class="container">
+
+  <!-- PRODUTOS -->
+  <div class="box">
+    <h2>Produtos</h2>
+    <input id="nomeProd" placeholder="Nome do produto">
+    <input id="precoProd" type="number" placeholder="Preço">
+    <input id="estoqueProd" type="number" placeholder="Estoque">
+    <button onclick="addProduto()">Cadastrar Produto</button>
+    <ul id="listaProdutos"></ul>
+  </div>
+
+  <!-- CAIXA -->
+  <div class="box">
+    <h2>Caixa</h2>
+    <select id="prodVenda"></select>
+    <button onclick="addCarrinho()">Adicionar</button>
+
+    <ul id="carrinho"></ul>
+
+    <p>Total: R$ <span id="total">0.00</span></p>
+
+    <select id="pagamento">
+      <option>Dinheiro</option>
+      <option>Pix</option>
+      <option>Cartão</option>
+    </select>
+
+    <input id="valorPago" type="number" placeholder="Valor pago">
+
+    <p>Troco: R$ <span id="troco">0.00</span></p>
+
+    <button class="verde" onclick="finalizarVenda()">Finalizar Venda</button>
+  </div>
+
+  <!-- ADMIN -->
+  <div class="box">
+    <h2>Admin</h2>
+    <button onclick="abrirCaixa()">Abrir Caixa</button>
+    <button onclick="fecharCaixa()">Fechar Caixa</button>
+    <button class="vermelho" onclick="resetar()">Reset Demonstração</button>
+
+    <h3>Vendas</h3>
+    <ul id="vendas"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
