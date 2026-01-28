@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+header {
+  background: #1e272e;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00000010;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.verde {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.vermelho {
+  background: #e74c3c;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
